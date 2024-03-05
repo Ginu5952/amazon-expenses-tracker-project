@@ -75,7 +75,7 @@ def choose(choices):
     if choices == '1':
             
             saved_details = enter_your_choice()
-            print(saved_details)
+            
             if saved_details is not None and len(saved_details) == 5:
                 print('\n')
                 print('Purchase saved*******')
@@ -114,6 +114,7 @@ def choose(choices):
 def validate_date(datee):
 
     date_pattern = r'^(0[1-9]|1[0-2])[-/](0[1-9]|[12][0-9]|3[01])[-/]\d{4}$'
+
     if re.search(date_pattern,datee):
         modified = re.sub(r'-', '/', datee)
         purchase_details['date'] = modified
@@ -320,4 +321,4 @@ else:
 
 
 
-       
+    
